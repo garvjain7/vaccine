@@ -13,7 +13,7 @@
 
     <div class="container" id="container">
         <div class="form-container sign-up">
-            <form>
+            <form action="connect.php", method="POST">
                 <h1>Register for Vaccination</h1>
                 <div class="social-icons">
                     <a href="#" class="icon"><i class="fa-brands fa-google-plus-g"></i></a>
@@ -22,17 +22,17 @@
                     <a href="#" class="icon"><i class="fa-brands fa-linkedin-in"></i></a>
                 </div>
                 <span>or use your email for registeration</span>
-                <input type="text" placeholder="Name" required>
-                <input type="email" placeholder="Email" required>
-                <input type="password" placeholder="Password" required>
-                <input type="number" placeholder="Age" required>
-                <input type="text" placeholder="District" required>
-                <input type="text" placeholder="State" required>
+                <input type="text" placeholder="Name" name="Name" required>
+                <input type="email" placeholder="Email" name="Email" required>
+                <input type="password" placeholder="Password" name="Password" required>
+                <input type="number" placeholder="Age" name="Age" required>
+                <input type="text" placeholder="District" name="District" required>
+                <input type="text" placeholder="State" name="State" required>
                 <button>Sign Up</button>
             </form>
         </div>
         <div class="form-container sign-in">
-            <form>
+            <form action="login.php", method="POST">
                 <h1>Sign In</h1>
                 <div class="social-icons">
                     <a href="#" class="icon"><i class="fa-brands fa-google-plus-g"></i></a>
