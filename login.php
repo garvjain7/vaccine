@@ -22,7 +22,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $stmt->fetch();
 
         if (password_verify($Password, $hashedPassword)) {
-            echo "Login successful!";
+            header("Location: home_index.html?login=success");
+            exit();
             // Redirect or start session here if needed
         } else {
             echo "Invalid password!";
