@@ -9,3 +9,12 @@ registerBtn.addEventListener('click', () => {
 loginBtn.addEventListener('click', () => {
     container.classList.remove("active");
 });
+
+window.addEventListener('DOMContentLoaded', () => {
+  const urlParams = new URLSearchParams(window.location.search);
+  if (urlParams.get('login') === 'success') {
+    alert("Thank you for logging in. You will receive the details via email.");
+    // Optional: remove the query string
+    window.history.replaceState({}, document.title, "home_index.html");
+  }
+});
