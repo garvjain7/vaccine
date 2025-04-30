@@ -13,8 +13,10 @@ loginBtn.addEventListener('click', () => {
 window.addEventListener('DOMContentLoaded', () => {
   const urlParams = new URLSearchParams(window.location.search);
   if (urlParams.get('login') === 'success') {
-    alert("Thank you for logging in. You will receive the details via email.");
-    // Optional: remove the query string
-    window.history.replaceState({}, document.title, "home_index.html");
+      // Show alert
+      alert("Thank you for logging in. You will receive the details via email.");
+
+      // Clean up URL
+      window.history.replaceState({}, document.title, window.location.pathname);
   }
 });
