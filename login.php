@@ -22,13 +22,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $stmt->fetch();
 
         if (password_verify($Password, $hashedPassword)) {
+            // Redirect to home_index.html with login=success
             header("Location: home_index.html?login=success");
-            exit();
-            // Redirect or start session here if needed
+            exit();  // Ensures script ends after redirect
         } else {
+            // Invalid password
             echo "Invalid password!";
         }
     } else {
+        // User not found
         echo "You are not registered!";
     }
 
